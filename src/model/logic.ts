@@ -9,13 +9,11 @@ export const getFilm = async (req: Request, res: Response) => {
 
 		const getCache = getNodeCache(title);
 		if (getCache) {
-			console.log(getCache);
 			return res.status(202).send(getCache);
 		}
 
 		const getRedis = await getRedisCache(title);
 		if (getRedis) {
-			console.log(getRedis);
 			return res.status(202).send(getRedis);
 		}
 
