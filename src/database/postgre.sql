@@ -1,5 +1,5 @@
 CREATE TABLE films (
-  film_id serial PRIMARY KEY,
+  film_id SERIAL PRIMARY KEY,
   title VARCHAR(50) UNIQUE NOT NULL,
   description VARCHAR(500) NOT NULL,
   release_year VARCHAR(20) NOT NULL
